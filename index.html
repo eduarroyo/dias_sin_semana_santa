@@ -24,27 +24,27 @@
     <div class="spacer">&nbsp;</div>
         <h1>Días sin Semanas Santas: <span id="cuenta_dias"></span></h1>
     </div>
-<script type="text/javascript">
+    <script type="text/javascript">
 
-var numDias = 0;
-actualizarDias();
-window.onload=function() {
-    setInterval(actualizarDias, 1000)
-};
+        var numDias = 0;
+        actualizarDias();
+        window.onload=function() {
+            setInterval(actualizarDias, 1000)
+        };
 
-function actualizarDias() {
+        function actualizarDias() {
 
-    var cuentaDias = document.getElementById("cuenta_dias");
-    var ss2019 = new Date(2019,4,21); 
-    var hoy = new Date();
-  
-    var diferencia = hoy.getTime() - ss2019.getTime(); 
-    var dias = Math.round(diferencia / (1000 * 3600 * 24));
+            var cuentaDias = document.getElementById("cuenta_dias");
+            var ss2019 = new Date(2019,4,21); 
+            var hoy = new Date();
+        
+            var diferencia = hoy.getTime() - ss2019.getTime(); 
+            var dias = Math.round(diferencia / (1000 * 3600 * 24));
 
-    cuentaDias.innerText = dias;
-}
+            cuentaDias.innerText = dias;
+        }
 
-</script>
+    </script>
 
 </body>
 </html>
