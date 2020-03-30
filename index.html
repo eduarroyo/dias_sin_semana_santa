@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Holly Week Free</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        div.spacer {
+            height: 40%;
+        }
+        h1 {
+            font-size: 120px;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="spacer">&nbsp;</div>
+        <h1>Días sin Semanas Santas: <span id="cuenta_dias"></span></h1>
+    </div>
+<script type="text/javascript">
+
+var numDias = 0;
+actualizarDias();
+window.onload=function() {
+    setInterval(actualizarDias, 1000)
+};
+
+function actualizarDias() {
+
+    var cuentaDias = document.getElementById("cuenta_dias");
+    var ss2019 = new Date(2019,4,21); 
+    var hoy = new Date();
+  
+    var diferencia = hoy.getTime() - ss2019.getTime(); 
+    var dias = Math.round(diferencia / (1000 * 3600 * 24));
+
+    cuentaDias.innerText = dias;
+}
+
+</script>
+
+</body>
+</html>
